@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <title>Our amazing site</title>
+</head>
+<body>
+    <p><b>Our todo list:</b></p>
+    <ul>
+        {% for todo in todos %}
+        <li>{{ todo }}</li>
+        {% endfor %}
+    </ul>
+    <form action="add" method="POST">
+        <span>Add to todo list:</span>
+        <input type="text" name="todo">
+        <input type="submit">
+    </form>
+    <hr>
+    <p>Hit counter: {{ hits }}</p>
+</body>
